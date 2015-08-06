@@ -14,7 +14,6 @@
     <link rel="shortcut icon" href="http://sebastianperez.me/assets/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/build/morfify.css"/> -->
 </head>
 
 <body>
@@ -37,7 +36,7 @@
                 <div class="col s12 m8">
                     <div class="row">
                         <h1>Plazo Fijo</h1>
-                        <form class="col s12">
+                        <div class="col s12">
                             <div class="row">
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">payment</i>
@@ -51,9 +50,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <button class="col s12 btn waves-effect waves-light btn-large" name="action" onclick="calcular();Materialize.fadeInImage('#results');">Calcular</button>
+                                <button class="col s12 btn waves-effect waves-light btn-large" onclick="calcular();Materialize.fadeInImage('#results');">Calcular</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                     <section id="results" style="opacity:0">
                         <div class="divider"></div>
@@ -112,8 +111,7 @@
         <div class="section">
         </div>
     </div>
-    <!-- <main role="main" id="app-container"></main>
-    <script src="/build/morfify.js"></script> -->
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="plazoFijo.js"></script>

@@ -1,0 +1,122 @@
+<!doctype html>
+<!--[if IE 8]> <html class="lt-ie10 lt-ie9 ie8" lang="es"> <![endif]-->
+<!--[if IE 9]> <html class="lt-ie10 ie9" lang="es"> <![endif]-->
+<!--[if gt IE 9] <!-->
+<html lang="es">
+<!--<![endif]-->
+
+<head>
+    <title>Plazo fijo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="http://sebastianperez.me/assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/build/morfify.css"/> -->
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Calculadora de Inversiones</a>
+             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>    
+                    <a href="https://github.com/seperez" target="_blank">
+                        <img class="circle"src="https://avatars0.githubusercontent.com/u/2219549?v=3&s=120"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m8">
+                    <div class="row">
+                        <h1>Plazo Fijo</h1>
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">payment</i>
+                                    <input id="txtMonto" type="number" pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" min="0" class="validate">
+                                    <label for="txtMonto" data-error="Incorrecto" data-success="Correcto">Monto a depositar</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">today</i>
+                                    <input id="txtDias" type="number" min="0" max="365" class="validate">
+                                    <label for="txtDias" data-error="Incorrecto" data-success="Correcto">Cantidad de días</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="col s12 btn waves-effect waves-light btn-large" name="action" onclick="calcular();Materialize.fadeInImage('#results');">Calcular</button>
+                            </div>
+                        </form>
+                    </div>
+                    <section id="results" style="opacity:0">
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="col s6">
+                                <div class="card-panel cyan center">
+                                    <h5 class="cyan-text text-darken-3">Ganarás</h5>
+                                    <h3 class="white-text">$<span id="ganancia"></span></h3>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="card-panel pink center">
+                                    <h5 class="pink-text text-accent-1">Recibirás</h5>
+                                    <h3 class="white-text">$<span id="total"></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col s12 m4">
+                    <h5>Tasas de Interes</h5>
+                    <blockquote>
+                        Tasas de interes aplicable al banco Santander Rio.
+                    </blockquote>
+                    <ul class="collection">
+                        <li class="collection-item">
+                            TNA <strong>23.58%</strong>
+                            <span class="badge">30 - 40 días</span>
+                        </li>
+                        <li class="collection-item">
+                            TNA <strong>24.10%</strong>
+                            <span class="badge">45 - 59 días</span>
+                        </li>
+                        <li class="collection-item">
+                            TNA <strong>25.13%</strong>
+                            <span class="badge">60 - 89 días</span>
+                        </li>
+                        <li class="collection-item">
+                            TNA <strong>25.61%</strong>
+                            <span class="badge">90 - 119 días</span>
+                        </li>
+                        <li class="collection-item">
+                            TNA <strong>25.87%</strong>
+                            <span class="badge">120 - 179 días</span>
+                        </li>
+                        <li class="collection-item">
+                            TNA <strong>26.14%</strong>
+                            <span class="badge">180 días</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="section">
+        </div>
+    </div>
+    <!-- <main role="main" id="app-container"></main>
+    <script src="/build/morfify.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="plazoFijo.js"></script>
+</body>
+
+</html>
